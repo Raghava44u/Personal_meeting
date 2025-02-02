@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meeting Room</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="meeting-container">
+        <div id="video-feed">
+            <!-- Local and Remote video will be dynamically added here -->
+        </div>
+        <div id="controls">
+            <button id="mute-btn">Mute</button>
+            <button id="video-btn">Stop Video</button>
+            <button id="leave-btn">Leave Meeting</button>
+        </div>
+        <div id="chat-container">
+            <input type="text" id="chat-message" placeholder="Type a message...">
+            <button id="send-chat">Send</button>
+            <div id="chat-box"></div>
+        </div>
+    </div>
+
+    <!-- ✅ Load only required scripts -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="meeting.js"></script> <!-- ✅ Only this script should be here -->
+    
+</body>
+</html>
